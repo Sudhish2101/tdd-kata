@@ -7,8 +7,7 @@ export class AppService {
     return 'Hello World!';
   }
 
-  async calculateString(calculateStringDto: CalculateStringDto): Promise<number> {
-    let numbers = calculateStringDto.numbers;
+  async calculateString(numbers: string): Promise<number> {
     // If the input string is empty, return 0
     if (!numbers) {
       return 0;

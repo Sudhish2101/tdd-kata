@@ -15,10 +15,10 @@ export class AppController {
   @Post('sum')
   async calculateString(@Body() calculateStringDto: CalculateStringDto, @Res() res: Response) {
     try {
-      let data = await this.appService.calculateString(calculateStringDto);
-      console.log(data)
+      let sum = await this.appService.calculateString(calculateStringDto.numbers);
+      console.log(sum)
       return res.status(HttpStatus.OK).json({
-        success: true, result: data
+        success: true, result: sum
       });
     } catch (err) {
       console.log(err);

@@ -12,6 +12,7 @@ export class AppController {
     return this.appService.getHello();
   }
 
+  // input: json with a key 'numbers' of string type, output: json with key 'success' of boolean type and 'result' of integer type
   @Post('sum')
   async calculateString(@Body() calculateStringDto: CalculateStringDto, @Res() res: Response) {
     try {

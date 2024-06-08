@@ -22,4 +22,11 @@ $ nest start
 $ npm run test
 ```
 
-## Support
+## Files
+```
+app.service.ts - contains the method for solving the problem statement
+
+app.service.spec.ts - contains the test cases and can be executed using the above test command
+
+app.controller.ts - contains the post method for calling the service function and fetching the result
+```

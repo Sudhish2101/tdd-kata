@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { CalculateStringDto } from './dto/sum-numbers.dto';
 
 @Injectable()
 export class AppService {

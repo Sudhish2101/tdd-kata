@@ -28,4 +28,9 @@ describe('AppService', () => {
         const numbers = '1, 2';
         expect(await appService.calculateString(numbers)).toBe(3);
     });
+
+    it('should handle new lines between numbers', async () => {
+        const numbers = '1\n2,3';
+        expect(await appService.calculateString(numbers)).toBe(6);
+    });
 });

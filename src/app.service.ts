@@ -12,7 +12,7 @@ export class AppService {
       return 0;
     }
 
-    let delimiter = /[,]/;
+    let delimiter = /[,\n]/; // Default delimiter pattern (comma or newline)
 
     // Split the input string by the delimiter(s)
     const numList = numbers.split(delimiter);

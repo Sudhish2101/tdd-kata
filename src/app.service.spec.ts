@@ -43,4 +43,9 @@ describe('AppService', () => {
         const numbers = '1,-2,3';
         await expect(appService.calculateString(numbers)).rejects.toThrow('Negative numbers not allowed: -2');
     });
+
+    it('should throw an error listing all negative numbers', async () => {
+        const numbers = '1,-2,-3,4';
+        await expect(appService.calculateString(numbers)).rejects.toThrow('Negative numbers not allowed: -2, -3');
+    });
 });

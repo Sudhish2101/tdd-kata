@@ -41,7 +41,7 @@ export class AppService {
     }
     // If there are negative numbers, throw an exception
     if (negativeNumbers.length > 0) {
-      throw new Error(`Negative numbers not allowed: ${negativeNumbers[0]}`);
+      throw new Error(`Negative numbers not allowed: ${negativeNumbers.join(", ")}`);
     }
     return total;
   }

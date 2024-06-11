@@ -13,6 +13,9 @@ describe('AppService', () => {
     });
 
     describe('calculateString', () => {
-
+        it('should return 0 for an empty string', async () => {
+            const numbers = '';
+            expect(await appService.calculateString(numbers)).toBe(0);
+        });
     });
 });

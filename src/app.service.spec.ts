@@ -18,4 +18,9 @@ describe('AppService', () => {
             expect(await appService.calculateString(numbers)).toBe(0);
         });
     });
+
+    it('should return the sum for a string of a number', async () => {
+        const numbers = '1';
+        expect(await appService.calculateString(numbers)).toBe(1);
+    });
 });

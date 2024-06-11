@@ -10,6 +10,8 @@ export class AppService {
     // If the input string is empty, return 0
     if (!numbers) {
       return 0;
+    } else {
+      return parseInt(numbers);
     }
   }
 }

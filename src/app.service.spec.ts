@@ -48,4 +48,10 @@ describe('AppService', () => {
         const numbers = '1,-2,-3,4';
         await expect(appService.calculateString(numbers)).rejects.toThrow('Negative numbers not allowed: -2, -3');
     });
+
+    it('should return the correct sum for large input strings', async () => {
+        const largeInput = Array(1000).fill("1").join("\n");
+        const numbers = largeInput;
+        expect(await appService.calculateString(numbers)).toBe(1000);
+    });
 });

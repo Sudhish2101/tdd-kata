@@ -38,4 +38,9 @@ describe('AppService', () => {
         const numbers = '//;\n1;2';
         expect(await appService.calculateString(numbers)).toBe(3);
     });
+
+    it('should throw an error for negative numbers', async () => {
+        const numbers = '1,-2,3';
+        await expect(appService.calculateString(numbers)).rejects.toThrow('Negative numbers not allowed: -2');
+    });
 });

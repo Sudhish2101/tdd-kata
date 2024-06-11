@@ -22,18 +22,26 @@ export class AppService {
       numbers = numbers.substring(delimiterEndIndex + 1);
       customDelimiter = true;
     }
-    
+
     // Split the input string by the delimiter(s)
     const numList = numbers.split(delimiter);
 
     let total = 0;
+    const negativeNumbers: number[] = [];
 
     // Sum up the numbers
     for (const num of numList) {
       if (num) {
         const n = parseInt(num);
+        if (n < 0) {
+          negativeNumbers.push(n);
+        }
         total += n;
       }
+    }
+    // If there are negative numbers, throw an exception
+    if (negativeNumbers.length > 0) {
+      throw new Error(`Negative numbers not allowed: ${negativeNumbers[0]}`);
     }
     return total;
   }

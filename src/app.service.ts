@@ -6,6 +6,7 @@ export class AppService {
     return 'Hello World!';
   }
 
+  // input: string of numbers, output: integer denoting the sum of those numbers, description: method for calculating the sum of the numbers
   async calculateString(numbers: string): Promise<number> {
     // If the input string is empty, return 0
     if (!numbers) {

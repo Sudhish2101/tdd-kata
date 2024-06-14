@@ -46,4 +46,13 @@ export class AppService {
     }
     return total;
   }
+
+  async printComments(comments, level = 0) {
+    for (const comment of comments) {
+      const indentation = "".padEnd(level * 2, " ");
+      console.log(indentation + comment.content);
+      // Recursively print children
+      this.printComments(comment.children, level + 1);
+    }
+  }
 }
